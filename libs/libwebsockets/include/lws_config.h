@@ -6,12 +6,12 @@
 	#endif
 #endif
 
-#define LWS_INSTALL_DATADIR "/usr/local/share"
-#define LWS_INSTALL_LIBDIR "/usr/local/lib"
+#define LWS_INSTALL_DATADIR "./install/share"
+#define LWS_INSTALL_LIBDIR "./install/lib"
 #define LWS_LIBRARY_VERSION_MAJOR 4
 #define LWS_LIBRARY_VERSION_MINOR 1
-#define LWS_LIBRARY_VERSION_PATCH_ELABORATED 5-
-#define LWS_LIBRARY_VERSION_PATCH 5
+#define LWS_LIBRARY_VERSION_PATCH_ELABORATED 6-v4.1.6
+#define LWS_LIBRARY_VERSION_PATCH 6
 
 /* LWS_LIBRARY_VERSION_NUMBER looks like 1005001 for e.g. version 1.5.1 */
 #define LWS_LIBRARY_VERSION_NUMBER (LWS_LIBRARY_VERSION_MAJOR * 1000000) + \
@@ -25,7 +25,7 @@
 /* #undef LWS_EXT_PTHREAD_LIBRARIES */
 
 /* #undef LWS_AVOID_SIGPIPE_IGN */
-/* #undef LWS_BUILD_HASH */
+#define LWS_BUILD_HASH "v4.1.6"
 /* #undef LWS_BUILTIN_GETIFADDRS */
 #define LWS_CLIENT_HTTP_PROXYING
 /* #undef LWS_DETECTED_PLAT_IOS */
@@ -48,12 +48,12 @@
 #define LWS_HAVE_EVP_aes_256_cfb128
 #define LWS_HAVE_EVP_aes_128_xts
 #define LWS_HAVE_EVP_PKEY_new_raw_private_key
-#define LWS_HAVE_EXECVPE
+/* #undef LWS_HAVE_EXECVPE */
 /* #undef LWS_HAVE_LIBCAP */
 #define LWS_HAVE_HMAC_CTX_new
-#define LWS_HAVE_MALLOC_H
-#define LWS_HAVE_MALLOC_TRIM
-#define LWS_HAVE_MALLOC_USABLE_SIZE
+/* #undef LWS_HAVE_MALLOC_H */
+/* #undef LWS_HAVE_MALLOC_TRIM */
+/* #undef LWS_HAVE_MALLOC_USABLE_SIZE */
 /* #undef LWS_HAVE_mbedtls_md_setup */
 /* #undef LWS_HAVE_mbedtls_net_init */
 /* #undef LWS_HAVE_mbedtls_rsa_complete */
@@ -66,15 +66,15 @@
 /* #undef LWS_HAVE_mbedtls_ssl_set_hs_authmode */
 /* #undef LWS_HAVE_MBEDTLS_NET_SOCKETS */
 /* #undef LWS_HAVE_NEW_UV_VERSION_H */
-#define LWS_HAVE_OPENSSL_ECDH_H
-#define LWS_HAVE_PIPE2
-#define LWS_HAVE_EVENTFD
+/* #undef LWS_HAVE_OPENSSL_ECDH_H */
+/* #undef LWS_HAVE_PIPE2 */
+/* #undef LWS_HAVE_EVENTFD */
 #define LWS_HAVE_PTHREAD_H
 #define LWS_HAVE_RSA_SET0_KEY
 /* #undef LWS_HAVE_RSA_verify_pss_mgf1 */
 #define LWS_HAVE_SSL_CTX_get0_certificate
-/* #undef LWS_HAVE_SSL_CTX_load_verify_file */
-/* #undef LWS_HAVE_SSL_CTX_load_verify_dir */
+#define LWS_HAVE_SSL_CTX_load_verify_file
+#define LWS_HAVE_SSL_CTX_load_verify_dir
 #define LWS_HAVE_SSL_CTX_set1_param
 #define LWS_HAVE_SSL_CTX_set_ciphersuites
 #define LWS_HAVE_SSL_EXTRA_CHAIN_CERTS
@@ -91,7 +91,7 @@
 #define LWS_HAVE_VFORK
 #define LWS_HAVE_X509_get_key_usage
 #define LWS_HAVE_X509_VERIFY_PARAM_set1_host
-#define LWS_LIBRARY_VERSION "4.1.5-"
+#define LWS_LIBRARY_VERSION "4.1.6-v4.1.6"
 #define LWS_LOGGING_BITFIELD_CLEAR 0
 #define LWS_LOGGING_BITFIELD_SET 0
 /* #undef LWS_MINGW_SUPPORT */
